@@ -17,3 +17,7 @@ def calculate_infections(starting_number_infections, reproduction_rate, num_days
     :param reproduction_rate: A floating point number indicating the rate of growth in the number of infections each day.
     :returns: The new number of infected individuals after the given number of days, rounded to the nearest integer.
     """
+    individuals_infected = starting_number_infections
+    for i in range(num_days):
+        individuals_infected *= reproduction_rate
+    return round(individuals_infected)
